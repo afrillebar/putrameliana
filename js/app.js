@@ -548,42 +548,42 @@ const kirim = async () => {
     document.getElementById('kirim').innerHTML = tmp;
 };
 
-const progressBar = (() => {
-    let bar = document.getElementById('bar');
+// const progressBar = (() => {
+//     let bar = document.getElementById('bar');
 
-    let clear = null;
-    let second = 1;
-    let counter = 1;
-    let untilOneHundred = parseInt(bar.style.width.replace('%', ''));
+//     let clear = null;
+//     let second = 1;
+//     let counter = 1;
+//     let untilOneHundred = parseInt(bar.style.width.replace('%', ''));
 
-    clear = setInterval(() => {
+//     clear = setInterval(() => {
 
-        if (untilOneHundred < 100) {
-            untilOneHundred = (counter + (untilOneHundred / 10)) / (second + (untilOneHundred / 100));
-            setNum(untilOneHundred);
-        } else {
-            clearInterval(clear);
-        }
+//         if (untilOneHundred < 100) {
+//             untilOneHundred = (counter + (untilOneHundred / 10)) / (second + (untilOneHundred / 100));
+//             setNum(untilOneHundred);
+//         } else {
+//             clearInterval(clear);
+//         }
 
-        if (counter % 100 == 0) {
-            second += 1;
-        }
+//         if (counter % 100 == 0) {
+//             second += 1;
+//         }
 
-        counter += 1;
-    }, 10);
+//         counter += 1;
+//     }, 10);
 
-    let setNum = (num) => {
-        bar.style.width = num + "%";
-        bar.innerText = Math.floor(num) + "%";
-    };
+//     let setNum = (num) => {
+//         bar.style.width = num + "%";
+//         bar.innerText = Math.floor(num) + "%";
+//     };
 
-    return {
-        stop: () => {
-            clearInterval(clear);
-            setNum(100.0);
-        }
-    };
-})();
+//     return {
+//         stop: () => {
+//             clearInterval(clear);
+//             setNum(100.0);
+//         }
+//     };
+// })();
 
 const opacity = () => {
     let modal = new Promise((res) => {
@@ -597,7 +597,7 @@ const opacity = () => {
     });
 
     modal.then(() => {
-        progressBar.stop();
+        // progressBar.stop();
 
         let op = parseInt(document.getElementById('loading').style.opacity);
         let clear = null;
