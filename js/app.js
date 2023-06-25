@@ -611,7 +611,7 @@ const opacity = () => {
                 document.getElementById('loading').remove();
                 document.getElementById('exampleModal').classList.add('fade');
             }
-        }, 10);
+        }, 1);
     });
 };
 
