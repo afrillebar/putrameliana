@@ -570,7 +570,7 @@ const progressBar = (() => {
         }
 
         counter += 1;
-    }, 10);
+    }, 1);
 
     let setNum = (num) => {
         bar.style.width = num + "%";
