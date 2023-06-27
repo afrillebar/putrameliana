@@ -593,7 +593,7 @@ const opacity = () => {
                 clearInterval(clear);
                 res();
             }
-        }, 100);
+        }, 1);
     });
 
     modal.then(() => {
